@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes();?>>
 
 	<head>
 
     <?php //echo get_template_directory_uri();?>
     
-		<meta charset="utf-8">
+		<meta charset="<?php bloginfo('charset')?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 
-		<title>Home V.2 - Rotors - Car Rental HTML5 Template</title>
+		<title><?php echo get_the_title();?></title>
+		<!-- <title>Home V.2 - Rotors - Car Rental HTML5 Template</title> -->
 		<link rel="shortcut icon" href="assets/images/logo/favourite_icon.png">
 
 		<!-- fraimwork - css include -->
@@ -36,12 +37,13 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/jquery-ui.css">
 
 		<!-- custom - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/style.css">
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri();?>">
 
+		<?php wp_head();?>
 	</head>
 
 
-	<body>
+	<body <?php body_class();?>>
 
 
 		<!-- backtotop - start -->
@@ -110,9 +112,9 @@
 
 						<div class="col-lg-3 col-md-6 col-sm-6 col-6">
 							<div class="brand_logo">
-								<a href="index.html">
-									<img src="assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
-									<img src="assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
+								<a href="<?php echo get_home_url();?>">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
 								</a>
 							</div>
 						</div>
@@ -134,7 +136,7 @@
 										<ul class="cart_items_list ul_li_block clearfix">
 											<li>
 												<div class="item_image">
-													<img src="assets/images/cart/img_2.png" alt="image_not_found">
+													<img src="<?php echo get_template_directory_uri();?>/assets/images/cart/img_2.png" alt="image_not_found">
 												</div>
 												<div class="item_content">
 													<h4 class="item_title">Digital Infrared Thermometer</h4>
@@ -145,7 +147,7 @@
 
 											<li>
 												<div class="item_image">
-													<img src="assets/images/cart/img_2.png" alt="image_not_found">
+													<img src="<?php echo get_template_directory_uri();?>/assets/images/cart/img_2.png" alt="image_not_found">
 												</div>
 												<div class="item_content">
 													<h4 class="item_title">Digital Infrared Thermometer</h4>
@@ -156,7 +158,7 @@
 
 											<li>
 												<div class="item_image">
-													<img src="assets/images/cart/img_2.png" alt="image_not_found">
+													<img src="<?php echo get_template_directory_uri();?>/assets/images/cart/img_2.png" alt="image_not_found">
 												</div>
 												<div class="item_content">
 													<h4 class="item_title">Digital Infrared Thermometer</h4>
@@ -166,8 +168,8 @@
 											</li>
 										</ul>
 										<ul class="btns_group ul_li_block clearfix">
-											<li><a href="cart.html" class="custom_btn bg_default_red text-uppercase">View Cart <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
-											<li><a href="#!" class="custom_btn bg_default_black text-uppercase">Checkout <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
+											<li><a href="cart.html" class="custom_btn bg_default_red text-uppercase">View Cart <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
+											<li><a href="#!" class="custom_btn bg_default_black text-uppercase">Checkout <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
 										</ul>
 									</div>
 								</li>
@@ -178,7 +180,7 @@
 									<div class="user_dropdown rotors_dropdown dropdown-menu clearfix" aria-labelledby="user_dropdown">
 										<div class="profile_info clearfix">
 											<a href="#!" class="user_thumbnail">
-												<img src="assets/images/meta/img_01.png" alt="thumbnail_not_found">
+												<img src="<?php echo get_template_directory_uri();?>/assets/images/meta/img_01.png" alt="thumbnail_not_found">
 											</a>
 											<div class="user_content">
 												<h4 class="user_name"><a href="#!">Rakibul Hassan</a></h4>
@@ -202,11 +204,7 @@
 							<nav class="main_menu clearfix">
 								<ul class="ul_li_center clearfix">
 									<li class="active has_child">
-										<a href="#!">Home</a>
-										<ul class="submenu">
-											<li><a href="index_1.html">Home Page V.1</a></li>
-											<li><a href="index_2.html">Home Page V.2</a></li>
-										</ul>
+										<a href="<?php echo get_home_url();?>">Home</a>
 									</li>
 									<li><a href="gallery.html">Our Cars</a></li>
 									<li><a href="review.html">Reviews</a></li>
@@ -283,7 +281,7 @@
 					<div class="about_content mb_60">
 						<div class="brand_logo mb_15">
 							<a href="index.html">
-								<img src="assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
+								<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
 							</a>
 						</div>
 						<p class="mb-0">
@@ -357,7 +355,7 @@
 								<h4 class="input_title text-white">Pick A Date</h4>
 								<input type="date" name="date">
 							</div>
-							<button type="submit" class="custom_btn bg_default_red btn_width text-uppercase">Book A Car <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></button>
+							<button type="submit" class="custom_btn bg_default_red btn_width text-uppercase">Book A Car <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></button>
 						</form>
 					</div>
 
@@ -384,7 +382,7 @@
 											6.6L V8 32V DDI OHV Turbo Diesel, 5-Speed Automatic, Fuel Type: Diesel, Color: Black
 										</p>
 										<div class="abtn_wrap clearfix" data-animation="fadeInUp" data-delay=".7s">
-											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a>
+											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a>
 										</div>
 									</div>
 								</div>
@@ -404,7 +402,7 @@
 											6.6L V8 32V DDI OHV Turbo Diesel, 5-Speed Automatic, Fuel Type: Diesel, Color: Black
 										</p>
 										<div class="abtn_wrap clearfix" data-animation="fadeInUp" data-delay=".7s">
-											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a>
+											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a>
 										</div>
 									</div>
 								</div>
@@ -424,7 +422,7 @@
 											6.6L V8 32V DDI OHV Turbo Diesel, 5-Speed Automatic, Fuel Type: Diesel, Color: Black
 										</p>
 										<div class="abtn_wrap clearfix" data-animation="fadeInUp" data-delay=".7s">
-											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a>
+											<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book Now <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a>
 										</div>
 									</div>
 								</div>
@@ -475,7 +473,7 @@
 								</div>
 
 								<div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
-									<button type="submit" class="custom_btn bg_default_red text-uppercase">Find A Car <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></button>
+									<button type="submit" class="custom_btn bg_default_red text-uppercase">Find A Car <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></button>
 								</div>
 							</div>
 						</form>
@@ -521,7 +519,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_01.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_01.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$230/Day</span>
 								</div>
@@ -543,7 +541,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_02.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_02.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$230/Day</span>
 								</div>
@@ -565,7 +563,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_03.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_03.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$120/Day</span>
 								</div>
@@ -587,7 +585,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_04.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_04.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$230/Day</span>
 								</div>
@@ -609,7 +607,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_05.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_05.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$160/Day</span>
 								</div>
@@ -631,7 +629,7 @@
 								</h3>
 								<div class="item_image position-relative">
 									<a class="image_wrap" href="#!">
-										<img src="assets/images/feature/img_06.jpg" alt="image_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_06.jpg" alt="image_not_found">
 									</a>
 									<span class="item_price bg_default_blue">$230/Day</span>
 								</div>
@@ -646,7 +644,7 @@
 					</div>
 
 					<div class="abtn_wrap text-center clearfix" data-aos="fade-up" data-aos-delay="100">
-						<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book A Car <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></a>
+						<a class="custom_btn bg_default_red btn_width text-uppercase" href="#!">Book A Car <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a>
 					</div>
 
 				</div>
@@ -744,33 +742,33 @@
 						<div class="slideshow1_slider" data-aos="fade-up" data-aos-delay="100">
 							<div class="item">
 								<div class="feature_fullimage">
-									<img src="assets/images/feature/img_07.jpg" alt="image_not_found">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_07.jpg" alt="image_not_found">
 									<div class="item_content text-white">
 										<span class="item_price bg_default_blue">$670/Day</span>
 										<h3 class="item_title text-white">2017 Chevrolet Corvette C7 Stingray  </h3>
-										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="assets/images/icons/icon_02.png" alt="icon_not_found"></a>
+										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_02.png" alt="icon_not_found"></a>
 									</div>
 								</div>
 							</div>
 
 							<div class="item">
 								<div class="feature_fullimage">
-									<img src="assets/images/feature/img_07.jpg" alt="image_not_found">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_07.jpg" alt="image_not_found">
 									<div class="item_content text-white">
 										<span class="item_price bg_default_blue">$670/Day</span>
 										<h3 class="item_title text-white">2017 Chevrolet Corvette C7 Stingray  </h3>
-										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="assets/images/icons/icon_02.png" alt="icon_not_found"></a>
+										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_02.png" alt="icon_not_found"></a>
 									</div>
 								</div>
 							</div>
 
 							<div class="item">
 								<div class="feature_fullimage">
-									<img src="assets/images/feature/img_07.jpg" alt="image_not_found">
+									<img src="<?php echo get_template_directory_uri();?>/assets/images/feature/img_07.jpg" alt="image_not_found">
 									<div class="item_content text-white">
 										<span class="item_price bg_default_blue">$670/Day</span>
 										<h3 class="item_title text-white">2017 Chevrolet Corvette C7 Stingray  </h3>
-										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="assets/images/icons/icon_02.png" alt="icon_not_found"></a>
+										<a class="text_btn text-uppercase" href="#!"><span>Kook A Car</span> <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_02.png" alt="icon_not_found"></a>
 									</div>
 								</div>
 							</div>
@@ -801,7 +799,7 @@
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 										<div class="blog_child" data-aos="fade-up" data-aos-delay="300">
 											<a class="item_image" href="blog_details.html">
-												<img src="assets/images/blog/child_01.jpg" alt="image_not_found">
+												<img src="<?php echo get_template_directory_uri();?>/assets/images/blog/child_01.jpg" alt="image_not_found">
 											</a>
 											<div class="item_content">
 												<h4 class="item_title mb-0">
@@ -816,7 +814,7 @@
 									<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 										<div class="blog_child" data-aos="fade-up" data-aos-delay="500">
 											<a class="item_image" href="blog_details.html">
-												<img src="assets/images/blog/child_02.jpg" alt="image_not_found">
+												<img src="<?php echo get_template_directory_uri();?>/assets/images/blog/child_02.jpg" alt="image_not_found">
 											</a>
 											<div class="item_content">
 												<h4 class="item_title mb-0">
@@ -851,7 +849,7 @@
 										</form>
 									</div>
 									<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
-										<button type="submit" class="custom_btn bg_default_red text-uppercase w-100 d-block">Book A Car <img src="assets/images/icons/icon_01.png" alt="icon_not_found"></button>
+										<button type="submit" class="custom_btn bg_default_red text-uppercase w-100 d-block">Book A Car <img src="<?php echo get_template_directory_uri();?>/assets/images/icons/icon_01.png" alt="icon_not_found"></button>
 									</div>
 								</div>
 							</div>
@@ -887,7 +885,7 @@
 									</p>
 									<div class="admin_info">
 										<div class="admin_image">
-											<img src="assets/images/meta/img_01.png" alt="image_not_found">
+											<img src="<?php echo get_template_directory_uri();?>/assets/images/meta/img_01.png" alt="image_not_found">
 										</div>
 										<h4 class="admin_name">Marianna Frazoni</h4>
 										<ul class="rating_star ul_li_center clearfix">
@@ -908,7 +906,7 @@
 									</p>
 									<div class="admin_info">
 										<div class="admin_image">
-											<img src="assets/images/meta/img_01.png" alt="image_not_found">
+											<img src="<?php echo get_template_directory_uri();?>/assets/images/meta/img_01.png" alt="image_not_found">
 										</div>
 										<h4 class="admin_name">Marianna Frazoni</h4>
 										<ul class="rating_star ul_li_center clearfix">
@@ -929,7 +927,7 @@
 									</p>
 									<div class="admin_info">
 										<div class="admin_image">
-											<img src="assets/images/meta/img_01.png" alt="image_not_found">
+											<img src="<?php echo get_template_directory_uri();?>/assets/images/meta/img_01.png" alt="image_not_found">
 										</div>
 										<h4 class="admin_name">Marianna Frazoni</h4>
 										<ul class="rating_star ul_li_center clearfix">
@@ -971,7 +969,7 @@
 							<div class="footer_about" data-aos="fade-up" data-aos-delay="100">
 								<div class="brand_logo mb_30">
 									<a href="index.html">
-										<img src="assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
+										<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
 									</a>
 								</div>
 								<p class="mb_15">
