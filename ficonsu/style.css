@@ -1832,3 +1832,6 @@ body.page #main-content { padding-top: 0; padding-bottom: 0; }
 	    padding-left: 12px !important;
 	}
 }
+ul.post-categories {
+    list-style: none;
+}

@@ -148,20 +148,36 @@
                 <div class="bottom-bar-content">
                     <div id="copyright" class="padding-left-9">
                         &copy; <a href="#">COPYRIGHT FINANCE</a>. DESIGN BY @DOANDU WITH LOVE.
-                    </div><!-- /#copyright -->
-                </div><!-- /.bottom-bar-content -->
+                    </div>
+                    <!-- /#copyright -->
+                </div>
+                <!-- /.bottom-bar-content -->
 
                 <div class="bottom-bar-menu">
                     <ul class="bottom-nav">
-                        <li class="menu-item"><a href="#">About Us</a></li>
+                        <!-- <li class="menu-item"><a href="#">About Us</a></li>
                         <li class="menu-item"><a href="#">Terms</a></li>
                         <li class="menu-item"><a href="#">Services</a></li>
-                        <li class="menu-item"><a href="#">Contacts</a></li>
+                        <li class="menu-item"><a href="#">Contacts</a></li> -->
                     </ul>
-                </div><!-- /.bottom-bar-menu -->
+                </div>
+                <!-- /.bottom-bar-menu -->
             </div>
         </div>
-    </div><!-- /#bottom -->
+    </div>
+    <!-- /#bottom -->
+
+                    <?php 
+                        wp_nav_menu( array(
+                        'menu'              => "Footer Menu",
+                        'menu_class'        => "bottom-nav",
+                        // 'menu_id'           => "", 
+                        'container'         => "div", 
+                        'container_class'   => "bottom-bar-nav", 
+                        // 'container_id'      => "", 
+                        'theme_location'    => "Footer Menu"                        
+                        ) );
+                    ?>
 </div><!-- /#page -->
 </div><!-- /#wrapper -->
 

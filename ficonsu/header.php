@@ -27,7 +27,7 @@
     <?php wp_head();?>
 </head>
 
-<body <?php body_class("header-fixed sidebar-right site-layout-full-width header-style-1 has-topbar topbar-style-1 menu-has-search menu-has-cart blog-archive");?>>
+<body <?php body_class("header-fixed sidebar-right site-layout-full-width header-style-1 has-topbar topbar-style-1 menu-has-search menu-has-cart blog-archive page no-sidebar  header-style-2  topbar-style-2");?>>
 
 <div id="wrapper" class="animsition">
 <div id="page" class="clearfix">
@@ -73,13 +73,13 @@
                 <div class="wrap-inner">
                     <div id="site-logo" class="clearfix">
                         <div id="site-logo-inner">
-                            <a href="home.html" title="Finance" rel="home" class="main-logo"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" width="184" height="40" alt="Finance" data-retina="assets/img/logo@2x.png" data-width="184" data-height="40"></a>
+                            <a href="<?php echo get_home_url();?>" title="Finance" rel="home" class="main-logo"><img src="<?php echo get_template_directory_uri()?>/assets/img/logo.png" width="184" height="40" alt="Finance" data-retina="assets/img/logo@2x.png" data-width="184" data-height="40"></a>
                         </div>
                     </div><!-- /#site-logo -->
 
                     <div class="mobile-button"><span></span></div><!-- //mobile menu button -->
 
-                    <nav id="main-nav" class="main-nav">
+                    <!-- <nav id="main-nav" class="main-nav">
                         <ul id="menu-primary-menu" class="menu">
                             <li class="menu-item current-menu-item menu-item-has-children"><a href="home.html">HOME</a>
                                 <ul class="sub-menu">
@@ -186,7 +186,19 @@
                                     </ul>
                                 </li>
                         </ul>
-                    </nav><!-- /#main-nav -->
+                    </nav>/#main-nav -->
+
+                    <?php 
+                        wp_nav_menu( array(
+                        'menu'              => "Primary Menu",
+                        'menu_class'        => "menu-item",
+                        'menu_id'           => "menu-primary-menu", 
+                        'container'         => "nav", 
+                        'container_class'   => "main-nav", 
+                        'container_id'      => "main-nav", 
+                        'theme_location'    => "Primary Menu"                        
+                        ) );
+                    ?>
 
                     <ul class="nav-extend active">
                         <li class="ext c">

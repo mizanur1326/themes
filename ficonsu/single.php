@@ -6,7 +6,7 @@
             <div class="featured-title-inner-wrap">
                 <div class="featured-title-heading-wrap">
                     <h1 class="featured-title-heading">
-                        News
+                    <?php wp_title(); ?>
                     </h1>
                 </div>
                 <div id="breadcrumbs">
@@ -78,22 +78,23 @@
                             </div><!-- /.post-meta -->
 
                             <div class="post-content post-excerpt">
-                                <?php the_excerpt();?>                                
+                                <?php the_content();?>                                
                             </div><!-- /.post-excerpt -->
 
-                            <div class="post-read-more">
+                            <!-- <div class="post-read-more">
                                 <div class="post-link">
-                                    <a href="<?php  the_permalink()?>">Read More</a>
+                                    <a href="<?php  //the_permalink()?>">Read More</a>
                                 </div>
-                            </div><!-- /.post-read-more -->
+                            </div>/.post-read-more -->
                         </div><!-- /.post-content-wrap -->
                         <div class="border-bottom-1px padding-top-33"></div>
                     </article>
-
-                <?php }};?>
+                    
+                    <?php }};?>
+                    <?php comments_template();?>
 <!-- ---------------------------------------------------------------------------------------------- -->
 
-                    <div class="themesflat-pagination padding-left-70 clearfix">
+                    <!-- <div class="themesflat-pagination padding-left-70 clearfix">
                         <ul class="page-numbers">
                             <li><a class="prev page-numbers" href="#"><span class=" finance-icon-cheveron-left"></span></a></li>
                             <li><a class="page-numbers current"  href="#">1</a></li>
@@ -101,7 +102,7 @@
                             <li><a class="page-numbers" href="#">3</a></li>
                             <li><a class="next page-numbers" href="#"><span class=" finance-icon-cheveron-right"></span></a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div><!-- /#inner-content -->
             </div><!-- /#site-content -->

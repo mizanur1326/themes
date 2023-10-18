@@ -6,7 +6,7 @@
             <div class="featured-title-inner-wrap">
                 <div class="featured-title-heading-wrap">
                     <h1 class="featured-title-heading">
-                        News
+                    <?php wp_title(); ?>
                     </h1>
                 </div>
                 <div id="breadcrumbs">
@@ -91,6 +91,8 @@
                     </article>
 
                 <?php }};?>
+                <?php comments_template();?>
+
 <!-- ---------------------------------------------------------------------------------------------- -->
 
                     <div class="themesflat-pagination padding-left-70 clearfix">
