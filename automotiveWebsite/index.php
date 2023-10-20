@@ -13,32 +13,7 @@
 		<!-- <title>Home V.2 - Rotors - Car Rental HTML5 Template</title> -->
 		<link rel="shortcut icon" href="assets/images/logo/favourite_icon.png">
 
-		<!-- fraimwork - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/bootstrap.min.css">
-
-		<!-- icon - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/fontawesome.css">
-
-		<!-- animation - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/aos.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/animate.css">
-
-		<!-- carousel - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/slick.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/slick-theme.css">
-
-		<!-- popup - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/magnific-popup.css">
-
-		<!-- select options - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/nice-select.css">
-
-		<!-- pricing range - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri();?>/assets/css/jquery-ui.css">
-
-		<!-- custom - css include -->
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri();?>">
-
+		
 		<?php wp_head();?>
 	</head>
 
@@ -1049,7 +1024,7 @@
 		================================================== -->
 
 		
-		<!-- fraimwork - jquery include -->
+<!-- fraimwork - jquery include -->
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery-3.5.1.min.js"></script>
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/popper.min.js"></script>
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap.min.js"></script>
@@ -1076,7 +1051,7 @@
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&ver=2.1.6"></script>
         <script src="<?php echo get_template_directory_uri();?>/assets/js/gmaps.min.js"></script>
 
-		<!-- pricing range - jquery include -->
+        <!-- pricing range - jquery include -->
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery-ui.js"></script>
 
 		<!-- counter - jquery include -->
@@ -1090,8 +1065,8 @@
         <script src="<?php echo get_template_directory_uri();?>/assets/js/mCustomScrollbar.js"></script>
 
 		<!-- custom - jquery include -->
-		<script src="<?php echo get_template_directory_uri();?>/assets/js/custom.js"></script>
+		<script src="<?php echo get_template_directory_uri();?>/assets/js/custom.js"></script>	
 
-		
+	
 	</body>
 </html>
