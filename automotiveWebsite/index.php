@@ -1024,7 +1024,7 @@
 		================================================== -->
 
 		
-<!-- fraimwork - jquery include -->
+		<!-- fraimwork - jquery include -->
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/jquery-3.5.1.min.js"></script>
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/popper.min.js"></script>
 		<script src="<?php echo get_template_directory_uri();?>/assets/js/bootstrap.min.js"></script>
