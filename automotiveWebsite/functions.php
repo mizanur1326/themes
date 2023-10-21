@@ -10,4 +10,3 @@ function automotive_setup(){
 }
 add_action( "after_setup_theme", "automotive_setup" );
 
-?>

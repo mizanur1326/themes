@@ -492,6 +492,22 @@ hr {
 ================================================== */
 /* list style settings - start 
 ================================================== */
+ul{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  display: flex;
+}
+.main_menu .main_menu_ul  li a{
+  margin: 0 10px;
+}
+.main_menu_ul{
+  display: flex;
+}
+.main_menu_ul a{
+  display: flex;
+}
 .ul_li,
 .ul_li_right,
 .ul_li_center {

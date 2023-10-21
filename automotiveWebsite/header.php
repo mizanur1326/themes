@@ -110,8 +110,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <div class="brand_logo">
                             <a href="index.html">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_02_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
                             </a>
                         </div>
                     </div>
@@ -199,17 +199,24 @@
 
                     <div class="col-lg-6 col-md-12">
                         <nav class="main_menu clearfix">
-                            <ul class="ul_li_center clearfix">
-                                <li class="active has_child">
-                                    <a href="#!">Home</a>
-                                </li>
+                            <!-- <ul class="ul_li_center main_menu_ul clearfix">
+                                <li><a href="#!">Home</a></li>
                                 <li><a href="gallery.html">Our Cars</a></li>
                                 <li><a href="review.html">Reviews</a></li>
                                 <li><a href="about.html">About</a></li>
-                            </ul>
+                            </ul> -->
+                        <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary_menu', // The menu location you want to display
+                                'container' => 'nav',
+                                'container_class' => 'main_menu clearfix',
+                                'menu_class' => 'ul_li_center main_menu_ul clearfix',
+                            ));
+                        ?>
                         </nav>
                     </div>
 
+                    
                 </div>
             </div>
         </div>
@@ -245,7 +252,7 @@
                 <div class="about_content mb_60">
                     <div class="brand_logo mb_15">
                         <a href="index.html">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
                         </a>
                     </div>
                     <p class="mb-0">
@@ -255,14 +262,23 @@
 
                 <div class="menu_list mb_60 clearfix">
                     <h3 class="title_text text-white">Menu List</h3>
-                    <ul class="ul_li_block clearfix">
+                    <!-- <ul class="ul_li_block clearfix">
                         <li class="active dropdown">
                             <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
                         </li>
                         <li><a href="gallery.html">Our Cars</a></li>
                         <li><a href="review.html">Reviews</a></li>
                         <li><a href="about.html">About</a></li>
-                    </ul>
+                    </ul> -->
+
+                    <?php
+                            wp_nav_menu(array(
+                                'theme_location' => 'primary_menu', // The menu location you want to display
+                                'container' => 'nav',
+                                'container_class' => 'main_menu clearfix',
+                                'menu_class' => 'ul_li_center main_menu_ul clearfix',
+                            ));
+                        ?>
 
                 </div>
 

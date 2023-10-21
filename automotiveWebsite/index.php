@@ -44,7 +44,7 @@
 								<div class="image_area">
 									<div class="brand_logo mb_15">
 										<a href="index.html">
-											<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_01_1x.png" srcset="assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
+											<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_01_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
 										</a>
 									</div>
 									<p class="mb_30">
