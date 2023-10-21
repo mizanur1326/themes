@@ -6,9 +6,10 @@
 					<div class="row justify-content-lg-between">
 						<div class="col-lg-4 col-md-4 col-sm-12 col-sm-12">
 							<div class="footer_about" data-aos="fade-up" data-aos-delay="100">
-								<div class="brand_logo mb_30">
+								<?php dynamic_sidebar('Left-Widgets')?>
+								<!-- <div class="brand_logo mb_30">
 									<a href="index.html">
-										<img src="<?php echo get_template_directory_uri();?>/assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
+										<img src="<?php //echo get_template_directory_uri();?>/assets/images/logo/logo_02_1x.png" srcset="assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
 									</a>
 								</div>
 								<p class="mb_15">
@@ -25,13 +26,14 @@
 										<input id="footer_search" type="search" name="search" placeholder="Search">
 										<label for="footer_search" class="input_icon"><i class="fal fa-search"></i></label>
 									</form>
-								</div>
+								</div> -->
 							</div>
 						</div>
 
 						<div class="col-lg-3 col-md-4 col-sm-12 col-sm-12">
 							<div class="footer_contact_info" data-aos="fade-up" data-aos-delay="200">
-								<h3 class="footer_widget_title">Contact Us:</h3>
+							<?php dynamic_sidebar('Middle-Widgets')?>
+								<!-- <h3 class="footer_widget_title">Contact Us:</h3>
 								<ul class="ul_li_block clearfix">
 									<li>
 										<strong><i class="fas fa-map-marker-alt"></i> Main Office Address:</strong>
@@ -43,13 +45,14 @@
 									<li><i class="far fa-angle-right"></i> Other Office Locations</li>
 									<li><i class="fas fa-envelope"></i> <strong>rotorseml@eml.fr</strong></li>
 									<li><i class="fas fa-phone"></i> <strong>+880 1680 6361 89</strong></li>
-								</ul>
+								</ul> -->
 							</div>
 						</div>
 
 						<div class="col-lg-4 col-md-4 col-sm-12 col-sm-12">
 							<div class="footer_useful_links" data-aos="fade-up" data-aos-delay="300">
-								<h3 class="footer_widget_title">Information:</h3>
+							<?php dynamic_sidebar('Right-Widgets')?>
+								<!-- <h3 class="footer_widget_title">Information:</h3>
 								<ul class="ul_li_block clearfix">
 									<li><a href="#!"><i class="fal fa-angle-right"></i> Find a Car for Rent in the Nearest Location</a></li>
 									<li><a href="#!"><i class="fal fa-angle-right"></i> Cars Catalog</a></li>
@@ -58,7 +61,7 @@
 									<li><a href="#!"><i class="fal fa-angle-right"></i> Contact Us</a></li>
 									<li><a href="#!"><i class="fal fa-angle-right"></i> Help Center</a></li>
 									<li><a href="#!"><i class="fal fa-angle-right"></i> Privacy Police</a></li>
-								</ul>
+								</ul> -->
 							</div>
 						</div>
 					</div>

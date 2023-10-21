@@ -500,7 +500,9 @@ ul{
   display: flex;
 }
 .main_menu .main_menu_ul  li a{
-  margin: 0 10px;
+  /* margin: 0px; */
+  color: #fff;
+  font-family: "Goldman", cursive;
 }
 .main_menu_ul{
   display: flex;
