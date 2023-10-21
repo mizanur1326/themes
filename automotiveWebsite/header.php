@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/jquery-ui.css">
 
     <!-- custom - css include -->
-    <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>">
 
     <?php wp_head(); ?>
 </head>
