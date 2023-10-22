@@ -45,4 +45,33 @@ function register_widgets(){
 }
 add_action('widgets_init', 'register_widgets');
 
+function bodySidebar_widgets(){
+    register_sidebar(array(
+        'name' => __('bodyLeft', 'automotive'),
+        'id' => 'bodyLeft',
+        'description' => __('This widget loacted to left side of body' , 'automotive'),
+        'description' => __('This widget located to the left side of the body', 'automotive'),
+        'before_widget' => '<div class="">',
+        'after_widget' => '</div>', 
+        'before_title' => '<h3 class="sb_widget_title">', 
+        'after_title' => '</h3>' 
+    ));
+}
+add_action('widgets_init', 'bodySidebar_widgets');
+
+function create_carousel_post_type() {
+    register_post_type('carousel_item',
+        array(
+            'labels' => array(
+                'name' => __('Carousel Items'),
+                'singular_name' => __('Carousel Item'),
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'supports' => array('title', 'editor', 'thumbnail'),
+        )
+    );
+}
+add_action('init', 'create_carousel_post_type');
+
 

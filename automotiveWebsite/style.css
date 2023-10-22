@@ -497,7 +497,7 @@ ul{
   padding: 0;
   box-sizing: border-box;
   list-style-type: none;
-  display: flex;
+  /* display: ; ///////////////////////////////////////////////////////////////////////DISPLAY:FLEX REMOVE KORE DICI*/
 }
 .main_menu .main_menu_ul  li a{
   /* margin: 0px; */

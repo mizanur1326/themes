@@ -13,7 +13,7 @@
 <section class="blog_section sec_ptb_100 clearfix">
 	<div class="container">
 		<div class="row justify-content-lg-between justify-content-md-center justify-content-sm-center">
-			<div class="col-lg-8 col-md-8 order-last">
+			<div class="col-lg-12 col-md-12 order-last">
 				<?php
 				if (have_posts()) :
 					while (have_posts()) :
@@ -35,56 +35,16 @@
 									</a>
 								</h3>
 								<?php
-								//the_content();
-								the_excerpt();
-								?>
-								<a class="text_btn text-uppercase" href="<?php the_permalink() ?>" target="_blank"><span>Read More</span> <img src="<?php echo get_template_directory_uri(); ?>/assets//images/icons/icon_02.png" alt="icon_not_found"></a>
+								the_content();
+								//the_excerpt();
+								?>								
 							</div>
 						</div>
 
 				<?php
 					endwhile;
 				endif;
-				?>
-				
-				<div class="pagination_wrap clearfix" data-aos="fade-up" data-aos-delay="100">
-					<div class="row align-items-center justify-content-lg-between">
-						<div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
-							<?php
-							global $wp_query;
-
-							$total_pages = $wp_query->max_num_pages;
-
-							if ($total_pages > 1) {
-								echo '<span class="page_number">' . sprintf(__('Page %d of %d', 'your-theme'), get_query_var('paged'), $total_pages) . '</span>';
-							}
-							?>
-						</div>
-
-						<div class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
-							<?php
-							echo '<ul class="pagination_nav ul_li_right clearfix">';
-
-							$pagination = paginate_links(array(
-								'current' => max(1, get_query_var('paged')),
-								'total' => $wp_query->max_num_pages,
-							));
-
-							if ($pagination) {
-								echo $pagination;
-							}
-
-							echo '</ul>';
-							?>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-4 col-md-6">
-				<aside class="sidebar_section clearfix" data-bg-color="#F2F2F2">
-					<?php dynamic_sidebar('bodyLeft') ?>
-				</aside>
+				?>		
 			</div>
 		</div>
 	</div>
