@@ -109,7 +109,7 @@
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <div class="brand_logo">
-                            <a href="index.html">
+                            <a href="<?php get_home_url();?>">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_02_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_02_2x.png 2x" alt="logo_not_found">
                             </a>
@@ -118,79 +118,8 @@
 
                     <div class="col-lg-3 col-md-6 col-sm-6 col-6 order-last">
                         <ul class="header_action_btns ul_li_right clearfix">
-                            <li>
-                                <button type="button" class="search_btn" data-toggle="collapse" data-target="#collapse_search_body" aria-expanded="false" aria-controls="collapse_search_body">
-                                    <i class="fal fa-search"></i>
-                                </button>
-                            </li>
-                            <li class="dropdown">
-                                <button type="button" class="cart_btn" id="cart_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fal fa-shopping-cart"></i>
-                                    <span class="cart_counter bg_default_red">3</span>
-                                </button>
-                                <div class="cart_dropdown rotors_dropdown dropdown-menu" aria-labelledby="cart_dropdown">
-                                    <h4 class="wrap_title">Cart Items: (3)</h4>
-                                    <ul class="cart_items_list ul_li_block clearfix">
-                                        <li>
-                                            <div class="item_image">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cart/img_2.png" alt="image_not_found">
-                                            </div>
-                                            <div class="item_content">
-                                                <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                                <span class="item_price">$39.50</span>
-                                            </div>
-                                            <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                        </li>
 
-                                        <li>
-                                            <div class="item_image">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cart/img_2.png" alt="image_not_found">
-                                            </div>
-                                            <div class="item_content">
-                                                <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                                <span class="item_price">$39.50</span>
-                                            </div>
-                                            <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                        </li>
 
-                                        <li>
-                                            <div class="item_image">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/cart/img_2.png" alt="image_not_found">
-                                            </div>
-                                            <div class="item_content">
-                                                <h4 class="item_title">Digital Infrared Thermometer</h4>
-                                                <span class="item_price">$39.50</span>
-                                            </div>
-                                            <button type="button" class="remove_btn"><i class="fal fa-times"></i></button>
-                                        </li>
-                                    </ul>
-                                    <ul class="btns_group ul_li_block clearfix">
-                                        <li><a href="cart.html" class="custom_btn bg_default_red text-uppercase">View Cart <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
-                                        <li><a href="#!" class="custom_btn bg_default_black text-uppercase">Checkout <img src="<?php echo get_template_directory_uri(); ?>/assets/images/icons/icon_01.png" alt="icon_not_found"></a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="dropdown">
-                                <button type="button" class="user_btn" id="user_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <i class="fal fa-user"></i>
-                                </button>
-                                <div class="user_dropdown rotors_dropdown dropdown-menu clearfix" aria-labelledby="user_dropdown">
-                                    <div class="profile_info clearfix">
-                                        <a href="#!" class="user_thumbnail">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/meta/img_01.png" alt="thumbnail_not_found">
-                                        </a>
-                                        <div class="user_content">
-                                            <h4 class="user_name"><a href="#!">Rakibul Hassan</a></h4>
-                                            <span class="user_title">Seller</span>
-                                        </div>
-                                    </div>
-                                    <ul class="ul_li_block clearfix">
-                                        <li><a href="#!"><i class="fal fa-user-circle"></i> Profile</a></li>
-                                        <li><a href="#!"><i class="fal fa-user-cog"></i> Settings</a></li>
-                                        <li><a href="#!"><i class="fal fa-sign-out"></i> Logout</a></li>
-                                    </ul>
-                                </div>
-                            </li>
                             <li>
                                 <button type="button" class="mobile_sidebar_btn"><i class="fal fa-align-right"></i></button>
                             </li>
@@ -199,12 +128,6 @@
 
                     <div class="col-lg-6 col-md-12">
                         <nav class="main_menu clearfix">
-                            <!-- <ul class="ul_li_center main_menu_ul clearfix">
-                                <li><a href="#!">Home</a></li>
-                                <li><a href="gallery.html">Our Cars</a></li>
-                                <li><a href="review.html">Reviews</a></li>
-                                <li><a href="about.html">About</a></li>
-                            </ul> -->
                         <?php
                             wp_nav_menu(array(
                                 'theme_location' => 'primary_menu', // The menu location you want to display
@@ -251,7 +174,7 @@
 
                 <div class="about_content mb_60">
                     <div class="brand_logo mb_15">
-                        <a href="index.html">
+                        <a href="<?php get_home_url();?>">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_1x.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/images/logo/logo_01_2x.png 2x" alt="logo_not_found">
                         </a>
                     </div>
@@ -262,14 +185,7 @@
 
                 <div class="menu_list mb_60 clearfix">
                     <h3 class="title_text text-white">Menu List</h3>
-                    <!-- <ul class="ul_li_block clearfix">
-                        <li class="active dropdown">
-                            <a href="#!" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-                        </li>
-                        <li><a href="gallery.html">Our Cars</a></li>
-                        <li><a href="review.html">Reviews</a></li>
-                        <li><a href="about.html">About</a></li>
-                    </ul> -->
+
 
                     <?php
                             wp_nav_menu(array(

@@ -74,4 +74,67 @@ function create_carousel_post_type() {
 }
 add_action('init', 'create_carousel_post_type');
 
+function register_slider_post_type() {
+    $labels = array(
+        'name' => 'Sliders',
+        'singular_name' => 'Slider',
+    );
 
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'supports' => array('title', 'editor', 'thumbnail'),
+        'rewrite' => array('slug' => 'slider'),
+    );
+
+    register_post_type('slider', $args);
+}
+
+add_action('init', 'register_slider_post_type');
+
+function register_vehicle_post_type() {
+    $labels = array(
+        'name' => 'Vehicles',
+        'singular_name' => 'Vehicle',
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'supports' => array('title', 'editor', 'thumbnail', 'custom-fields'),
+        'rewrite' => array('slug' => 'vehicle'),
+    );
+
+    register_post_type('vehicle', $args);
+}
+
+add_action('init', 'register_vehicle_post_type');
+
+function register_testimonial_post_type() {
+    $labels = array(
+        'name' => 'Testimonials',
+        'singular_name' => 'Testimonial',
+        'add_new' => 'Add New Testimonial',
+        'add_new_item' => 'Add New Testimonial',
+        'edit_item' => 'Edit Testimonial',
+        'new_item' => 'New Testimonial',
+        'all_items' => 'All Testimonials',
+        'view_item' => 'View Testimonial',
+        'search_items' => 'Search Testimonials',
+        'not_found' => 'No testimonials found',
+        'not_found_in_trash' => 'No testimonials found in trash',
+        'menu_name' => 'Testimonials',
+    );
+
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-testimonial',
+        'supports' => array('title', 'editor', 'thumbnail'),
+    );
+
+    register_post_type('testimonial', $args);
+}
+
+add_action('init', 'register_testimonial_post_type');

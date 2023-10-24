@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php 
+//Template Name:contact
+get_header();?>
 
 
 			<!-- breadcrumb_section - start
